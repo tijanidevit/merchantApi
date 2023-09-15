@@ -1,0 +1,22 @@
+models:
+  User:
+    fullname: string
+    email: string unique
+    image: string default:'user.png'
+    password: string
+    role: string
+    balance: decimal
+
+  Merchant:
+    business_name: string
+    business_code: string
+    image: string default:'business.png'
+    password: string
+    role: string
+    balance: decimal
+
+controllers:
+  Auth:
+    register:
+      validate: fullname, email, password
+      save: post

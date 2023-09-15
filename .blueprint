@@ -1,0 +1,14 @@
+created:
+    - app/Http/Controllers/AuthController.php
+    - database/factories/UserFactory.php
+    - database/factories/MerchantFactory.php
+    - database/migrations/2023_09_15_162009_create_users_table.php
+    - database/migrations/2023_09_15_162010_create_merchants_table.php
+    - app/Models/User.php
+    - app/Models/Merchant.php
+    - tests/Feature/Http/Controllers/AuthControllerTest.php
+updated:
+    - routes/web.php
+models:
+    User: { fullname: string, email: 'string unique', image: "string default:'user.png'", password: string, role: string, balance: decimal }
+    Merchant: { business_name: string, business_code: string, image: "string default:'business.png'", password: string, role: string, balance: decimal }
